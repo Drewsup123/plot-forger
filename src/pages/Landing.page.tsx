@@ -14,7 +14,7 @@ const LandingPage = () => {
             <div className={styles.section + " " + styles.rightSection} style={{
                 backgroundImage: `url(${landingPageWrite})`
             }}>
-                    <button>I am a Creator</button>
+                <button>I am a Creator</button>
             </div>
         </div>
     )
