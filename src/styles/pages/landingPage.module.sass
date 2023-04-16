@@ -5,9 +5,8 @@
     .section
         width: 50%
         background-position: center
-        background-size: cover
+        background-size: 110% 110%
         height: 100vh
-        background-color: blue
         filter: blur(5px)
         display: flex
         justify-content: center
@@ -16,7 +15,8 @@
         &:hover
             cursor: pointer
             filter: blur(0px)
-            transition: filter 0.5s ease-in-out
+            transition: all 0.5s ease-in-out
+            background-size: 100% 100%
     .leftSection
         button
             width: 50%
@@ -26,6 +26,7 @@
             border: none
             font-size: 30px
             color: #fff
+            cursor: pointer
     .rightSection
         button
             width: 50%
@@ -35,3 +36,4 @@
             border: none
             font-size: 30px
             color: #fff
+            cursor: pointer
