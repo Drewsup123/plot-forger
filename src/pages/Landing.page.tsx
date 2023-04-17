@@ -21,7 +21,8 @@ const LandingPage = () => {
         <div className={styles.landingPage}>
             <motion.div
                 animate={{
-                    width: "100%",
+                    flex: !selectedType ? 1 : selectedType === "reader" ? 1 : 0,
+                    display: selectedType === "creator" ? "none" : "flex",
                 }}
                 className={styles.section + " " + styles.leftSection}
                 style={{
@@ -33,7 +34,14 @@ const LandingPage = () => {
                 </button>
             </motion.div>
             <motion.div
-                animate={{}}
+                animate={{
+                    flex: !selectedType
+                        ? 1
+                        : selectedType === "creator"
+                        ? 1
+                        : 0,
+                    display: selectedType === "reader" ? "none" : "flex",
+                }}
                 className={styles.section + " " + styles.rightSection}
                 style={{
                     backgroundImage: `url(${landingPageWrite})`,
