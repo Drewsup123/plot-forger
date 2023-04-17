@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/pages/landingPage.module.sass";
 import landingPageRead from "../Assets/images/landingPageRead.jpg";
 import landingPageWrite from "../Assets/images/landingPageWrite.jpg";
+import { motion } from "framer-motion";
 
 const LandingPage = () => {
     const [selectedType, setSelectedType] = React.useState<
@@ -18,7 +19,10 @@ const LandingPage = () => {
 
     return (
         <div className={styles.landingPage}>
-            <div
+            <motion.div
+                animate={{
+                    width: "100%",
+                }}
                 className={styles.section + " " + styles.leftSection}
                 style={{
                     backgroundImage: `url(${landingPageRead})`,
@@ -27,8 +31,9 @@ const LandingPage = () => {
                 <button onClick={(e) => selectType(e, "reader")}>
                     I am a Reader
                 </button>
-            </div>
-            <div
+            </motion.div>
+            <motion.div
+                animate={{}}
                 className={styles.section + " " + styles.rightSection}
                 style={{
                     backgroundImage: `url(${landingPageWrite})`,
@@ -37,7 +42,7 @@ const LandingPage = () => {
                 <button onClick={(e) => selectType(e, "creator")}>
                     I am a Creator
                 </button>
-            </div>
+            </motion.div>
         </div>
     );
 };
